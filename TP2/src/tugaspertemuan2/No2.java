@@ -18,10 +18,10 @@ public class No2 {
         System.out.print("Masukkan jumlah tabungan: ");
         int tabungan = input.nextInt();
         
-        System.out.print("Apakah sudah ada pasangan(Y/T): ");
-        char pasangan = input.next().charAt(0);
+        System.out.print("Apakah sudah ada pasangan(true/false): ");
+        boolean pasangan = input.nextBoolean();
         
-        boolean check = ((tabungan > 100000000) && (pasangan == 'Y' || pasangan == 'y'));
+        boolean check = ((tabungan > 100000000) && (pasangan));
         
         System.out.println("Tabungan: " + tabungan);
         System.out.println("Sudah ada pasangan: " + pasangan);

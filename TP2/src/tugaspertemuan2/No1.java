@@ -17,7 +17,7 @@ public class No1 {
         // TODO code application logic here
         Scanner input = new Scanner(System.in);
         
-        System.out.println("Masukkan 3 angka negatif:");
+        System.out.println("Masukkan 3 angka pecahan negatif:");
         float num1, num2, num3;
         
         num1 = input.nextFloat();
