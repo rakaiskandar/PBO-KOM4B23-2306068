@@ -18,7 +18,6 @@ public class No3 {
         System.out.print("Masukkan jumlah penumpang: ");
         int penumpang = input.nextInt();
         
-        
         if(penumpang % 7 == 0) {
             mobil = (penumpang / 7);
         }else {

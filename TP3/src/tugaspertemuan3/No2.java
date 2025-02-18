@@ -5,17 +5,13 @@
 package tugaspertemuan3;
 
 import java.util.Scanner;
-
 /**
  *
- * @author HP
+ * @author HP-
  */
 public class No2 {
     public static void main(String[] args) {
-        final double bobotUTS = 0.35;
-        final double bobotUAS = 0.45;
-        final double bobotTugas = 0.20;
-        
+        final double bobotUTS = 0.35, bobotUAS = 0.45, bobotTugas = 0.20;
         Scanner input = new Scanner(System.in);
         int nilaiUTS, nilaiUAS, nilaiTugas;
         
@@ -34,8 +30,10 @@ public class No2 {
             System.out.println("A");
         }else if(nilaiAkhir >= 70 && nilaiAkhir < 80) {
             System.out.println("B");
-        }else {
+        }else if(nilaiAkhir >= 50 && nilaiAkhir < 70){
             System.out.println("C");
+        }else {
+            System.out.println("D");
         }
     }
 }
