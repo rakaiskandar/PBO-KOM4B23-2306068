@@ -13,15 +13,15 @@ import java.util.Scanner;
 public class No3 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        int mobil = 1;
+        int mobil;
         
         System.out.print("Masukkan jumlah penumpang: ");
         int penumpang = input.nextInt();
         
-        if(penumpang % 7 == 0) {
+        if(penumpang > 7 && penumpang % 7 == 0) {
             mobil = (penumpang / 7);
         }else {
-            mobil += (penumpang / 7);
+            mobil = (penumpang / 7) + 1;
         }
         
         System.out.println("Mobil yang disediakan: " + mobil);
