@@ -54,6 +54,7 @@ public class No2 {
                 }
             }
         }
+        System.out.println();
 
         input.close();
     }

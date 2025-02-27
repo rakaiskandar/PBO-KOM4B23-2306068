@@ -19,19 +19,17 @@ public class No1 {
         // TODO code application logic here
         Scanner input = new Scanner(System.in);
         
-        int i = 1;
-        
-        while(i <= 3) {
-            int num = input.nextInt();
+        for (int i = 0; i < 3; i++) {
+            int num = input.nextInt(), count = 0;
+            int temp = num;
             
-            if(String.valueOf(Math.abs(num)).length() == 4) {
-                System.out.println("Ribuan");
-            } else {
-                System.out.println("Bukan Ribuan");
+            while (temp != 0) {
+                count++;
+                temp /= 10;
             }
             
-            i++;
-        } 
+            System.out.println(count == 4 ? "Ribuan" : "Bukan Ribuan");
+        }
         
         input.close();
     }
