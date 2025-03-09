@@ -23,7 +23,7 @@ public class No2 {
                     }
                 }
                 
-                if (jenisAngka.equals(jenisAngka)) {
+                if (jenisAngka.equals("Prima")) {
                     if (isPrime) {
                         System.out.print(i + " ");
                     } 
