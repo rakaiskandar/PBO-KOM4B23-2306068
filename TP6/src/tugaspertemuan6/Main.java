@@ -8,7 +8,7 @@ package tugaspertemuan6;
  * @author HP
  */
 public class Main {
-
+    
     /**
      * @param args the command line arguments
      */
@@ -23,8 +23,8 @@ public class Main {
         
         System.out.println("\nPersegi Panjang 2:");
         PersegiPanjang persegiPanjang2 = new PersegiPanjang();
-        persegiPanjang1.setPanjang(30);
-        persegiPanjang1.setLebar(40);
+        persegiPanjang2.setPanjang(30);
+        persegiPanjang2.setLebar(40);
         System.out.println("Panjang: " + persegiPanjang2.panjang + "\n" + "Lebar: " + persegiPanjang2.lebar);
         System.out.println("Luas: " + persegiPanjang2.getLuas() + " cm^2");
         System.out.println("Keliling: " + persegiPanjang2.getKeliling() + " cm");
