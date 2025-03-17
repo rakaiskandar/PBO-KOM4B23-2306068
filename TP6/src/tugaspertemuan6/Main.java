@@ -17,7 +17,7 @@ public class Main {
         PersegiPanjang persegiPanjang1 = new PersegiPanjang();
         
         System.out.println("Persegi Panjang 1:");
-        System.out.println("Panjang: " + persegiPanjang1.panjang + "\n" + "Lebar: " + persegiPanjang1.lebar);
+        System.out.println("Panjang: " + persegiPanjang1.getPanjang() + "\n" + "Lebar: " + persegiPanjang1.getLebar());
         System.out.println("Luas: " + persegiPanjang1.getLuas() + " cm^2");
         System.out.println("Keliling: " + persegiPanjang1.getKeliling() + " cm");
         
@@ -25,13 +25,13 @@ public class Main {
         PersegiPanjang persegiPanjang2 = new PersegiPanjang();
         persegiPanjang2.setPanjang(30);
         persegiPanjang2.setLebar(40);
-        System.out.println("Panjang: " + persegiPanjang2.panjang + "\n" + "Lebar: " + persegiPanjang2.lebar);
+        System.out.println("Panjang: " + persegiPanjang2.getPanjang() + "\n" + "Lebar: " + persegiPanjang2.getLebar());
         System.out.println("Luas: " + persegiPanjang2.getLuas() + " cm^2");
         System.out.println("Keliling: " + persegiPanjang2.getKeliling() + " cm");
         
         System.out.println("\nPersegi Panjang 3:");
         PersegiPanjang persegiPanjang3 = new PersegiPanjang(25, 35);
-        System.out.println("Panjang: " + persegiPanjang3.panjang + "\n" + "Lebar: " + persegiPanjang3.lebar);
+        System.out.println("Panjang: " + persegiPanjang3.getPanjang() + "\n" + "Lebar: " + persegiPanjang3.getLebar());
         System.out.println("Luas: " + persegiPanjang3.getLuas() + " cm^2");
         System.out.println("Keliling: " + persegiPanjang3.getKeliling() + " cm");
     }
