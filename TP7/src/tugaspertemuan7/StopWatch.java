@@ -17,6 +17,14 @@ public class StopWatch {
         startTime = System.nanoTime();
         run = false;
     }
+
+    public long getStartTime() {
+        return startTime;
+    }
+
+    public long getEndTime() {
+        return endTime;
+    }
     
     public void start() {
         this.startTime = System.nanoTime();
