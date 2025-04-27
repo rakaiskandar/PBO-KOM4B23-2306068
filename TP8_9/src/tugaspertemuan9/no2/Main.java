@@ -4,8 +4,6 @@
  */
 package tugaspertemuan9.no2;
 
-import java.time.LocalDate;
-
 /**
  *
  * @author HP
@@ -15,8 +13,7 @@ public class Main {
         Person p1 = new Person("Raka", "083820002958", "Jalan", "isk@gamil.com");
         Student s2 = new Student(p1.nama, p1.noTelp, p1.alamat, p1.email, "Mahasiswa Tahun Kedua");
         
-        LocalDate tglKerja = LocalDate.of(2023, 8, 21);
-        Employee e3 = new Employee("Yana", "083820002958", "Jalan", "isk@gamil.com", "PT Pertamina", 12000000, tglKerja);
+        Employee e3 = new Employee("Yana", "083820002958", "Jalan", "isk@gamil.com", "PT Pertamina", 12000000, "21-05-2022");
         
         Faculty f4 = new Faculty(e3.nama, e3.noTelp, e3.alamat, e3.email, e3.getKantor(), e3.getGaji(), e3.getTglKerja(), "09:00 - 15:30", "Staf Admin");
         Staff s5 = new Staff(e3.nama, e3.noTelp, e3.alamat, e3.email, e3.getKantor(), e3.getGaji(), e3.getTglKerja(), "Sarjana");

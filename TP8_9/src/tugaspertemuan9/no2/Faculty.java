@@ -4,8 +4,6 @@
  */
 package tugaspertemuan9.no2;
 
-import java.time.LocalDate;
-
 /**
  *
  * @author HP
@@ -14,7 +12,7 @@ public class Faculty extends Employee {
     private String jamKerja;
     private String pangkat;
 
-    public Faculty(String nama, String noTelp, String alamat, String email, String kantor, int gaji, LocalDate tglKerja, String jamKerja, String pangkat) {
+    public Faculty(String nama, String noTelp, String alamat, String email, String kantor, int gaji, String tglKerja, String jamKerja, String pangkat) {
         super(nama, noTelp, alamat, email, kantor, gaji, tglKerja);
         this.jamKerja = jamKerja;
         this.pangkat = pangkat;

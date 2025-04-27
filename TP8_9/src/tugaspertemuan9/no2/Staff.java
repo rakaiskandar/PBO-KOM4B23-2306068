@@ -4,8 +4,6 @@
  */
 package tugaspertemuan9.no2;
 
-import java.time.LocalDate;
-
 /**
  *
  * @author HP
@@ -13,7 +11,7 @@ import java.time.LocalDate;
 public class Staff extends Employee {
     private String gelar;
 
-    public Staff(String nama, String noTelp, String alamat, String email, String kantor, int gaji, LocalDate tglKerja, String gelar) {
+    public Staff(String nama, String noTelp, String alamat, String email, String kantor, int gaji, String tglKerja, String gelar) {
         super(nama, noTelp, alamat, email, kantor, gaji, tglKerja);
         this.gelar = gelar;
     }

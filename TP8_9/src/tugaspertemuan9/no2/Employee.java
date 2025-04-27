@@ -4,7 +4,9 @@
  */
 package tugaspertemuan9.no2;
 
-import java.time.LocalDate;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 /**
  *
@@ -13,9 +15,9 @@ import java.time.LocalDate;
 public class Employee extends Person {
     private String kantor;
     private int gaji;
-    private LocalDate tglKerja;
+    private String tglKerja;
 
-    public Employee(String nama, String noTelp, String alamat, String email, String kantor, int gaji, LocalDate tglKerja) {
+    public Employee(String nama, String noTelp, String alamat, String email, String kantor, int gaji, String tglKerja) {
         super(nama, noTelp, alamat, email);
         this.kantor = kantor;
         this.gaji = gaji;
@@ -30,7 +32,7 @@ public class Employee extends Person {
         this.kantor = kantor;
     }
 
-    public void setTglKerja(LocalDate tglKerja) {
+    public void setTglKerja(String tglKerja) {
         this.tglKerja = tglKerja;
     }
     
@@ -42,12 +44,23 @@ public class Employee extends Person {
         return kantor;
     }
 
-    public LocalDate getTglKerja() {
+    public String getTglKerja() {
         return tglKerja;
     }
 
     @Override
     public String toString() {
         return "Nama: " + super.getNama() + " dari kelas " + getClass().getSimpleName();
+    }
+    
+    final protected Date MyDate(String dateString) {
+        SimpleDateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy");
+        Date tanggalDiPekerjakan = new Date();
+        try {
+            tanggalDiPekerjakan = dateFormat.parse(dateString);
+        } catch (ParseException e) {
+            System.out.println("Invalid date format. Please use YYYY-MM-DD.");
+        }
+        return tanggalDiPekerjakan;
     }
 }
