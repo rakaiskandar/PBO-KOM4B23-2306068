@@ -15,9 +15,9 @@ import java.util.Date;
 public class Employee extends Person {
     private String kantor;
     private int gaji;
-    private String tglKerja;
+    private Date tglKerja;
 
-    public Employee(String nama, String noTelp, String alamat, String email, String kantor, int gaji, String tglKerja) {
+    public Employee(String nama, String noTelp, String alamat, String email, String kantor, int gaji, Date tglKerja) {
         super(nama, noTelp, alamat, email);
         this.kantor = kantor;
         this.gaji = gaji;
@@ -33,7 +33,7 @@ public class Employee extends Person {
     }
 
     public void setTglKerja(String tglKerja) {
-        this.tglKerja = tglKerja;
+        this.tglKerja = MyDate(tglKerja);
     }
     
     public int getGaji() {
@@ -44,8 +44,12 @@ public class Employee extends Person {
         return kantor;
     }
 
-    public String getTglKerja() {
+    public Date getTglKerja() {
         return tglKerja;
+    }
+    
+    public String getFormattedTglKerja() {
+        return MyDate(tglKerja); 
     }
 
     @Override
@@ -53,14 +57,19 @@ public class Employee extends Person {
         return "Nama: " + super.getNama() + " dari kelas " + getClass().getSimpleName();
     }
     
-    final protected Date MyDate(String dateString) {
+    final static Date MyDate(String dateString) {
         SimpleDateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy");
-        Date tanggalDiPekerjakan = new Date();
+        dateFormat.setLenient(false);
         try {
-            tanggalDiPekerjakan = dateFormat.parse(dateString);
+            return dateFormat.parse(dateString);
         } catch (ParseException e) {
-            System.out.println("Invalid date format. Please use YYYY-MM-DD.");
+            System.out.println("Format tanggal salah. Harusnya dd-MM-yyyy!");
+            return null;
         }
-        return tanggalDiPekerjakan;
+    }
+    
+    public static String MyDate(Date date) {
+        SimpleDateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy");
+        return dateFormat.format(date);
     }
 }

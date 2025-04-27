@@ -4,6 +4,8 @@
  */
 package tugaspertemuan9.no2;
 
+import java.util.Date;
+
 /**
  *
  * @author HP
@@ -11,7 +13,7 @@ package tugaspertemuan9.no2;
 public class Staff extends Employee {
     private String gelar;
 
-    public Staff(String nama, String noTelp, String alamat, String email, String kantor, int gaji, String tglKerja, String gelar) {
+    public Staff(String nama, String noTelp, String alamat, String email, String kantor, int gaji, Date tglKerja, String gelar) {
         super(nama, noTelp, alamat, email, kantor, gaji, tglKerja);
         this.gelar = gelar;
     }

@@ -13,7 +13,7 @@ public class Main {
         Person p1 = new Person("Raka", "083820002958", "Jalan", "isk@gamil.com");
         Student s2 = new Student(p1.nama, p1.noTelp, p1.alamat, p1.email, "Mahasiswa Tahun Kedua");
         
-        Employee e3 = new Employee("Yana", "083820002958", "Jalan", "isk@gamil.com", "PT Pertamina", 12000000, "21-05-2022");
+        Employee e3 = new Employee("Yana", "083820002978", "Jalan", "yan@gamil.com", "PT Pertamina", 12000000, Employee.MyDate("21-05-2022"));
         
         Faculty f4 = new Faculty(e3.nama, e3.noTelp, e3.alamat, e3.email, e3.getKantor(), e3.getGaji(), e3.getTglKerja(), "09:00 - 15:30", "Staf Admin");
         Staff s5 = new Staff(e3.nama, e3.noTelp, e3.alamat, e3.email, e3.getKantor(), e3.getGaji(), e3.getTglKerja(), "Sarjana");
@@ -21,7 +21,7 @@ public class Main {
         System.out.println(p1); 
         System.out.println(s2);
         System.out.println("\n" + e3);
-        System.out.println("Kantor: " + e3.getKantor() + "\nGaji: " + e3.getGaji() + "\nMulai Kerja: " + e3.getTglKerja() + "\n");
+        System.out.println("Kantor: " + e3.getKantor() + "\nGaji: " + e3.getGaji() + "\nMulai Kerja: " + e3.getFormattedTglKerja()+ "\n");
         System.out.println(f4); 
         System.out.println("Jam Kerja: " + f4.getJamKerja() + "\nPangkat: " + f4.getPangkat() + "\n");
         System.out.println(s5); 
